@@ -1,0 +1,34 @@
+<div class="contact-container">
+  <h2>📬 Contact Us</h2>
+  <p>We’d love to hear from you! Please fill out the form below.</p>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
+      <div class="error" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+      <div class="error" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+        Valid email is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" formControlName="message" placeholder="Your message"></textarea>
+      <div class="error" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+        Message cannot be empty
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+  </form>
+
+  <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
+</div>

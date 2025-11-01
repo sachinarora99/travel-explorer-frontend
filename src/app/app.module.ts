@@ -9,6 +9,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DestinationDetailsComponent } from './pages/destination-details/destination-details.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { DestinationDetailsComponent } from './pages/destination-details/destina
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    DestinationDetailsComponent
+    DestinationDetailsComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

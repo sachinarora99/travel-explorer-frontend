@@ -27,6 +27,11 @@
         <a class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
       </li>
 
+      <li class="nav-item">
+  <a class="nav-link" routerLink="/contact" routerLinkActive="active-link">Contact</a>
+</li>
+
+
       <!-- If not logged in -->
       <li class="nav-item" *ngIf="!loggedInUser">
         <a class="nav-link" routerLink="/login" routerLinkActive="active-link">Login</a>
@@ -37,7 +42,7 @@
 
       <!-- If logged in -->
       <li class="nav-item" *ngIf="loggedInUser">
-        <a class="nav-link logout-link" (click)="logout()">Logout</a>
+        <a class="nav-link" (click)="logout()">Logout</a>
       </li>
     </ul>
   </div>
