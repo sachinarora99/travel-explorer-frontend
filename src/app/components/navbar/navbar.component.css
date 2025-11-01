@@ -1,0 +1,50 @@
+/* 🌈 Navbar Base */
+.custom-navbar {
+  background: linear-gradient(90deg, #0f4faf, #0fd2f9);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+/* 🧭 Brand */
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 🔗 Navbar Links */
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* ✨ Hover Effects */
+.nav-link:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 🚀 Active Link Highlight */
+.active-link {
+  color: #fff !important;
+  border-bottom: 2px solid #fff;
+}
+
+/* 📱 Responsive Fix */
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
+.nav-link[ng-reflect-ng-if], 
+.nav-link[click],
+.nav-link.logout-link {
+  cursor: pointer;
+}
+
